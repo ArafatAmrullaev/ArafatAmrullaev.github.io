@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <nav>
+        <h2 class="logo"><a href="#">My Portfolio</a></h2>
+        <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#works">My Works</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#footer">My Contacts</a></li>
+        </ul>
+    </nav>
+    <div id="header">
+        <div class="container">
+            <div class="header-text">
+                <h4>Hello! I am Arafat Amrullaev</h4>
+                <h1>Welcome to my portfolio page!</h1>
+            </div>
+        </div>
+    </div>
+<!--About-->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col1"></div>
+                <div class="about-col2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>My name is Arafat, I am 19 years old. I am a web developer. I know Python programming language <br> and Django framework. I can develop backend part of sites. Also I learn JavaScript to become a <br> fullstack developer.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Python</li>
+                            <li>Git</li>
+                            <li>Postgresql</li>
+                            <li>Django</li>
+                            <li>HTML/CSS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li>Participation in 3 hackathons</li>
+                            <li>Team Expirience</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li>2022 <br> Makers Bootcamp <br> Python Web Developer</li>
+                            <li>2021-2025 <br> Ala-Too International University <br> Applied Math And Informatics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--My Works-->
+    <div id="works">
+        <div class="container">
+            <div class="block">
+                <h1>Here's Some Of My Works:</h1>
+                <div class="pics_work">
+                    <img src="./images/Screenshot from 2022-11-05 21-53-52.png" alt="work1">
+                    <img src="./images/Screenshot from 2022-11-05 21-54-10.png" alt="work2">
+                    <img src="./images/Screenshot from 2022-11-05 21-54-21.png" alt="work3">
+                    <img src="./images/Screenshot from 2022-11-05 21-54-35.png" alt="worl4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Gallery-->
+    <div id="gallery">
+        <div class="container">
+            <div class="block_gallery">
+                <h1>Gallery</h1>
+                <div class="pics_gallery">
+                    <img src="./images/360_F_118033506_uMrhnrjBWBxVE9sYGTgBht8S5liVnIeY.jpg" alt="photo1">
+                    <img src="./images/360_F_118033506_uMrhnrjBWBxVE9sYGTgBht8S5liVnIeY.jpg" alt="photo2">
+                    <img src="./images/360_F_118033506_uMrhnrjBWBxVE9sYGTgBht8S5liVnIeY.jpg" alt="photo3">
+                    <img src="./images/360_F_118033506_uMrhnrjBWBxVE9sYGTgBht8S5liVnIeY.jpg" alt="photo4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <div id="footer">
+        <div class="container">
+            <h1>My Contacts:</h1>
+            <div class="links">
+                <ul class="email">
+                    <li><i class="fa-solid fa-envelope"></i> arafatamrullaev021@gmail.com</li>
+                    <li><i class="fa-regular fa-phone"></i> +996 996 996 996</li>
+                </ul>
+                <div class="icons">
+                    <a href="https://github.com/ArafatAmrullaev"><i class="fa-brands fa-github"></i> Github</a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname) {
+        for (tablink of tablinks) {
+            tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+
+</body>
+</html>
